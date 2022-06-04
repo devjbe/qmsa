@@ -31,9 +31,9 @@ a {
 }
 #logomarca {
     width: 100%;
-    margin-left: 150px;
-    
-    
+    display: flex;
+    justify-content: center;
+       
 }
 #logo {
     width:auto; 
@@ -42,8 +42,6 @@ a {
     margin-left: 10px;
     transition: all ease-in-out;
     animation: rotate 6s linear infinite;
-    
-    
 }
 
 
@@ -63,6 +61,7 @@ a {
     width:fit-content;
     color: #2596be;
     
+    
 }
 
 .showname {
@@ -78,13 +77,18 @@ a {
     font-size: 150px;
     color: transparent;
     animation: text_show 0.4s ease-in forwards;
-    animation-delay: 1s;   
+    animation-delay: 1s; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center;
 }
 #subname {
     font-size: 50px; 
     color: transparent; 
     animation: text_show 0.8s ease-in forwards;
-    animation-delay: 1.5s;   
+    animation-delay: 1.5s;  
+    display: flex;
+    justify-content: center; 
 }
 
 /*Quem somos*/
@@ -166,11 +170,12 @@ a {
     flex-direction:column;
     width: 100%;
     margin:auto;
-    overflow:hidden;
+    
     border-radius:25px;
+    
 
 }
-#services .services-info {
+#services .services-info, .services-ib {
     padding: 30px;
     flex-basis:50%; /*maximo de flex*/
     height: 100%;
@@ -182,18 +187,26 @@ a {
     color: #fff;
     border-radius: 25px;
 }
-#services .services-info h1{
+.services-ib {
+    align-items: flex-end;
+}
+#services .services-info, .services-ib, h1{
     font-size:4rem;
     font-weight:500px;
+    text-align: justify;
 
 }
-#services .services-info h2{
+#services .services-info, .services-ib, h2{
     font-size:1.8rem;
     font-weight: 500;
-    margin-top: 10px;
+    margin: 0;
+    
     
 
 }
+
+   
+
 
 #services .services-img {
     flex-basis:50%;
@@ -202,7 +215,35 @@ a {
     position:relative;
     border-radius: 25px;
     
+
+    
 }
+.services-info, .services-ib {
+    position: relative;
+}
+
+.services-info {
+    left: 500px;
+    box-shadow: 0 3px 10px #071e26
+    
+}
+
+.services-ib{
+    right:500px;
+    box-shadow: 0 3px 10px #071e26;
+    
+    
+}
+
+.services-ib:hover {
+    transform: translateX(500px);
+}
+.services-info:hover {
+    transform: translateX(-500px);
+
+}
+
+
 
 /* #services .services-img:after {
     content:'';
@@ -214,8 +255,8 @@ a {
     background-color: linear-gradient(60deg,#29323c 0%,#485563 100%);
     opacity: 0.5;
 }*/
-#services .services-img {
-    transition: 0.5s ease transform; 
+#services .services-img, .services-info, .services-ib{
+    transition: 2s ease-in-out transform; 
 }
 
 #services .services-item:hover {
@@ -330,11 +371,21 @@ textarea {
 textarea::placeholder {
     color: #fff;
 }
+
 .btn{
     border-radius: 25px;
     font-size: 20px;
     padding: 20px;
     margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px #071e26 ;
+    transition: transform 0.2s ease-in;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+
 }
 .tel {
     
@@ -389,11 +440,11 @@ textarea::placeholder {
         width: 100%;
         border-radius: 0;
     }
-    #services  .all-projects .services-info{
+    #services  .all-projects, .services-info, .services-ib {
         height: 100%;
     }
-    #services .all-projects .services-img{
-        height: 100%;
+    #services .all-projects, .services-img, .services-ib {
+        width: 100%;
     }
     #services .services-item:nth-child(even) {
         flex-direction: row-reverse;
@@ -403,6 +454,10 @@ textarea::placeholder {
 @media only screen and (max-width:992px) {
     .imgfooter, .imgservices {
         display: none;
+    }
+    .services-info, .services-ib {
+        left: 0;
+        right: 0;
     }
     .contato {
         display: block;
