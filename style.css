@@ -303,7 +303,7 @@ a {
 
 }
 .logo{
-    border: solid black;
+    border: solid #071e26;
     border-radius: 50%;
 }
 
@@ -409,6 +409,7 @@ textarea::placeholder {
 
 }
 
+/*Keyframes*/
 
 @keyframes rotate {
     0% {
@@ -432,6 +433,7 @@ textarea::placeholder {
         color: #1e7898;
     }
 }
+/*Media*/
 @media only screen and (min-width:768px) {
     #services .services-item{
         flex-direction: row;
