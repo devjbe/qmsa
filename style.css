@@ -283,7 +283,8 @@ a {
 }
 .clients{
     display: inline-flex;
-    margin-left: 2.5rem;
+    position: relative;
+    left: 36px;
     
     
 }
@@ -460,16 +461,46 @@ textarea::placeholder {
     .services-info, .services-ib {
         left: 0;
         right: 0;
+        width: 95%;
     }
     .contato {
         display: block;
-        width: 100%;
-        margin-top:100px;
+        width: 98%;
+        margin-top:0;
     }
     .form-control input[type='text'],
     .form-control input[type='email'],
     textarea { 
         width: 100%;
     }
+    .services-ib:hover {
+        transform: translateY(5px);
+    }
+    .services-info:hover {
+        transform: translateY(-5px);
+    
+    }
+    #name{
+        font-size: 100px;
+    }
+    .title {
+        width: auto;
+        font-size: 42px;
+       
+
+    }
+    .quemsomos{
+       width: auto;
+       padding: 5px;
+    }
+    .clients {
+        left: 0;
+    }
+    .social {
+       width: 50px;
+       padding: 0;    
+    }
+   
+   
    
 }
