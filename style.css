@@ -243,18 +243,6 @@ a {
 
 }
 
-
-
-/* #services .services-img:after {
-    content:'';
-    position: absolute;
-    left:0;
-    top:0;
-    height: 100%;
-    width: 100%;
-    background-color: linear-gradient(60deg,#29323c 0%,#485563 100%);
-    opacity: 0.5;
-}*/
 #services .services-img, .services-info, .services-ib{
     transition: 2s ease-in-out transform; 
 }
@@ -283,8 +271,7 @@ a {
 }
 .clients{
     display: inline-flex;
-    position: relative;
-    left: 36px;
+    width: 100%;
     
     
 }
@@ -292,14 +279,14 @@ a {
     text-align: center;
     margin: 18px 10px 40px;
     transition: transform 0.2s ease-in;
-    max-width: 400px;
+    max-width: 330px;
     height: auto;
-    width: 350px;    
     background-color: #fff;
     color: #071e26;
     border-radius: 25px;
     box-shadow: 0 3px 10px #071e26 ;
     padding: 20px;
+    transition: all 1s ease-in-out;
    
 
 }
@@ -468,6 +455,7 @@ textarea::placeholder {
         width: 98%;
         margin-top:0;
     }
+   
     .form-control input[type='text'],
     .form-control input[type='email'],
     textarea { 
@@ -493,9 +481,7 @@ textarea::placeholder {
        width: auto;
        padding: 5px;
     }
-    .clients {
-        left: 0;
-    }
+    
     .social {
        width: 50px;
        padding: 0;    
