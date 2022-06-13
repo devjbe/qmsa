@@ -193,7 +193,7 @@ a {
 #services .services-info, .services-ib, h1{
     font-size:4rem;
     font-weight:500px;
-    text-align: justify;
+    text-align: start;
 
 }
 #services .services-info, .services-ib, h2{
